@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY 17th MONTHSARRY!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Column 1 -->
+        <div class="column1">
+            <div class="container">
+                <div class="envelope-wrapper">
+                    <div class="envelope">
+                        <div class="letter">
+                            <div class="text">
+                                <strong>Dearest Christina</strong>
+                                <p> 
+                                    Happy Monthsary, my love! Every day with you feels like a blessing, and I’m so grateful to have you in my life. You make my heart full in ways I never knew possible, and I can’t wait to keep building more memories with you.
+                                    I love you so much babuu❤️ 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="column2">
+            <div class="separator-box">
+                <div class="audio-container" id="yt-container">
+                    <iframe id="yt-player" width="0" height="0" frameborder="0" allow="autoplay"></iframe>
+                </div>
+                <H2>Would you celebrate our monthsarry with me? </H2>
+                <img src="https://media.tenor.com/LRDMe1QpqFYAAAAC/cat-cute.gif" alt="GIF">
+                <button class="playAudio" id="playAudio" onclick="playAudio()">Play Audio</button>
+                <button class="yesBTN" id="yesBTN" onclick="yesButton()">Yuss</button>
+                <button class="noBTN" id="noBTN">Naur</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Envelope opening animation
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+        // YouTube Audio Control
+        let player = document.getElementById("yt-player");
+
+        playAudio = () => {
+            player.src = "https://www.youtube.com/embed/4adZ7AguVcw?autoplay=1"; // Fixed URL
+        }
+        yesButton = () => {
+            alert("Yeyy! Iloooveyoooouuu babyy!");
+            window.location.reload();
+        }
+        const moveRandomEl = (e) => {
+            e.style.position = "absolute";
+            e.style.top = Math.floor(Math.random() * 90 + 5) + "%";
+            e.style.left = Math.floor(Math.random() * 90 + 5) + "%";
+        }
+        const moveRandomBTN = document.getElementById("noBTN").addEventListener("mouseenter", (e) => {
+            moveRandomEl(e.target);
+        });
+    </script>
+</body>
+</html>
